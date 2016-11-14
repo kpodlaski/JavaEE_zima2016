@@ -4,8 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Jednostka {
+	private int id;
 	private String nazwa;
 	private List<Osoba> pracownicy = new ArrayList<Osoba>();
+	
 	/**
 	 * @return the nazwa
 	 */
@@ -37,6 +39,18 @@ public class Jednostka {
 	
 	public Jednostka(){
 		
+	}
+	/**
+	 * @return the id
+	 */
+	public int getId() {
+		return id;
+	}
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(int id) {
+		this.id = id;
 	}
 	
 	
