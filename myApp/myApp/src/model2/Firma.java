@@ -41,13 +41,13 @@ public class Firma {
 		Stanowisko pracBiurowy = new Stanowisko("Pracownik Biuriowy");
 		
 		Jednostka j = new Jednostka("Biuro g³wne");
-		j.getPracownicy().add(new Osoba("Anna","Dyrektor","/fotki/1.jpg", kierownik ));
-		j.getPracownicy().add(new Osoba("Jan","Pasek","/fotki/2.jpg", pracBiurowy ));
-		j.getPracownicy().add(new Osoba("Ewelina","Pokrzywka","/fotki/3.jpg", pracBiurowy ));
+		j.getPracownicy().add(new Osoba("Anna","Dyrektor","fotki/1.jpg", kierownik ));
+		j.getPracownicy().add(new Osoba("Jan","Pasek","fotki/2.jpg", pracBiurowy ));
+		j.getPracownicy().add(new Osoba("Ewelina","Pokrzywka","fotki/3.png", pracBiurowy ));
 		jednostki.add(j);
 		j = new Jednostka("Obs³uga");
-		j.getPracownicy().add(new Osoba("Tomasz","Tomaszewski","/fotki/4.jpg", kierownik ));
-		j.getPracownicy().add(new Osoba("Adam","Adamski","/fotki/5.jpg", ciec ));
+		j.getPracownicy().add(new Osoba("Tomasz","Tomaszewski","fotki/4.png", kierownik ));
+		j.getPracownicy().add(new Osoba("Adam","Adamski","fotki/5.jpg", ciec ));
 		jednostki.add(j);
 		
 	}

@@ -13,9 +13,17 @@
 		jedn.setNazwa(firma.getJednostki().get(jedn.getId()).getNazwa());
 	}
 %>
-<title>Insert title here ${jedn.nazwa}</title>
+<title>Jednostka ${jedn.nazwa}</title>
 </head>
 <body>
-${jedn.id}
+<h1>${jedn.nazwa}</h1>
+Paracownicy:<br/>
+<% 
+	for (int pid =0; pid< jedn.getPracownicy().size(); pid++)
+	{
+		Osoba o = jedn.getPracownicy().get(pid);
+		out.println( " <a href='pracownik.jsp?id="+pid+"&jid="+jedn.getId()+"'>"+o.getImie()+" "+o.getNazwisko()+"</a>"    );
+	}
+%>
 </body>
 </html>
