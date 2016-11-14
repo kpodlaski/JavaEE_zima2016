@@ -2,7 +2,7 @@ package model2;
 
 import java.util.ArrayList;
 import java.util.List;
-
+//http://merlin.phys.uni.lodz.pl/kft-old/people/KPodlaski/zaj/Aplikacje_Bazodanowe_JEE_zaliczenie_zadania.pdf
 public class Firma {
 	private String nazwa;
 	private List<Jednostka> jednostki = new ArrayList<>();
