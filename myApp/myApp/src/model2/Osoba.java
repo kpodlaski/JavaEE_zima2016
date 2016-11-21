@@ -1,8 +1,10 @@
 package model2;
 
 public class Osoba {
+	private int id;
 	private String imie;
 	private String nazwisko;
+	private String wiek;
 	private String foto;
 	private Stanowisko stanowisko;
 	/**
@@ -63,6 +65,30 @@ public class Osoba {
 	
 	public Osoba(){
 		
+	}
+	/**
+	 * @return the id
+	 */
+	public int getId() {
+		return id;
+	}
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(int id) {
+		this.id = id;
+	}
+	/**
+	 * @return the wiek
+	 */
+	public String getWiek() {
+		return wiek;
+	}
+	/**
+	 * @param wiek the wiek to set
+	 */
+	public void setWiek(String wiek) {
+		this.wiek = wiek;
 	}
 	
 }

@@ -1,7 +1,7 @@
 package model2;
 
 public class Stanowisko {
-
+	private int id;
 	private String nazwa;
 
 	/**
@@ -25,5 +25,19 @@ public class Stanowisko {
 	
 	public Stanowisko(){
 		
+	}
+
+	/**
+	 * @return the id
+	 */
+	public int getId() {
+		return id;
+	}
+
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(int id) {
+		this.id = id;
 	}
 }
