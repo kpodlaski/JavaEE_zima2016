@@ -7,6 +7,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.List;
+
+import model2.Jednostka;
+import model2.Osoba;
 
 public class ConnectOracle {
 
@@ -56,6 +60,15 @@ public class ConnectOracle {
 		
 		con.close();
 		
+		List<Jednostka> jednostki = DBConnector.getAllJednostki();
+		for(Jednostka j : jednostki){
+			System.out.println(j.getId() + " " +j.getNazwa());
+			System.out.println("Pracownicy");
+			for (Osoba o : j.getPracownicy()){
+				System.out.println("\t"+o);
+			}
+			
+		}
 		//TEST  DBConnector;
 	}
 

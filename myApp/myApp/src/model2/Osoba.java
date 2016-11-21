@@ -90,5 +90,14 @@ public class Osoba {
 	public void setWiek(String wiek) {
 		this.wiek = wiek;
 	}
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return String.format("%s, %s %s : %s (%s, %s)", id, imie, nazwisko, stanowisko,
+				wiek, foto);
+	}
+	
 	
 }

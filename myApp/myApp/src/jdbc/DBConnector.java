@@ -37,7 +37,7 @@ public class DBConnector {
 				j.setId(id);
 				Statement st2 = con.createStatement();
 				st2.execute("Select imie, nazwisko, stanowisko, fotka, wiek, nazwa, "+
-							" osoba.id as oid, stanowisko.id as sid"+
+							" osoba.id as oid, stanowiska.id as sid"+
 						    " From Osoba,Stanowiska,os_jedn_lnk "+
 							"WHERE osoba.id=id_osoba AND osoba.stanowisko = stanowiska.id AND id_jedn="+id);
 				ResultSet rs2 = st2.getResultSet();
@@ -49,10 +49,13 @@ public class DBConnector {
 							rs2.getString("fotka"),s);
 					o.setWiek(rs2.getString("wiek"));
 					o.setId(rs2.getInt("oid"));
+					j.getPracownicy().add(o);
 		    	}
-			
+				rs2.close();
+				result.add(j);
 			}
-			//close()+
+			rs.close();
+			con.close();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
