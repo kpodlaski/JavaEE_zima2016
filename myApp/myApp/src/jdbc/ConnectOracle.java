@@ -60,7 +60,8 @@ public class ConnectOracle {
 		
 		con.close();
 		
-		List<Jednostka> jednostki = DBConnector.getAllJednostki();
+		DBConnector db = new DBConnector();
+		List<Jednostka> jednostki = db.getAllJednostki();
 		for(Jednostka j : jednostki){
 			System.out.println(j.getId() + " " +j.getNazwa());
 			System.out.println("Pracownicy");

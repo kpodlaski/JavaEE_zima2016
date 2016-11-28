@@ -90,4 +90,5 @@ public class DBConnector {
 	
 	public Stanowisko getStanowiskoByName(String name) {return null;}
 	
+	//+insert + update
 }
