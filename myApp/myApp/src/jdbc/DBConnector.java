@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import model2.Jednostka;
@@ -23,7 +24,7 @@ public class DBConnector {
 		} 
 	}
 	
-	public static List<Jednostka>getAllJednostki(){
+	public  List<Jednostka> getAllJednostki(){
 		List<Jednostka> result = new ArrayList<>();
 		try {
 			Connection con =  DriverManager.getConnection("jdbc:oracle:thin:@10.16.80.11:1521:orcl", "sys as SYSDBA", "oracle");
@@ -63,11 +64,30 @@ public class DBConnector {
 		return result;
 	}
 	
-	public static Jednostka getJednostkaById(int id){
+	public  Jednostka getJednostkaById(int id){
 		return null;
 	}
 	
-	public static List<Jednostka> getJednostkiByNazwa(String nazwa){
+	public  List<Jednostka> getJednostkiByNazwa(String nazwa){
 		return null;
 	}
+	
+	public List<Osoba> getAllOsoby(){
+		return null;
+	}
+
+	public Osoba getOsobaById(int id){return null;}
+	
+	public List<Osoba> getOsobyByNazwisko(String nazwisko){return null;}
+	
+	public List<Osoba> getOsobaByImie(String imie){return null;}
+	
+	public List<Osoba> getOsobyOlderThan(Date date){return null;}
+	
+	public Stanowisko getStanowiskoById(int id){return null;}
+	
+	public List<Stanowisko> getAllStanowiska(){return null;}
+	
+	public Stanowisko getStanowiskoByName(String name) {return null;}
+	
 }
