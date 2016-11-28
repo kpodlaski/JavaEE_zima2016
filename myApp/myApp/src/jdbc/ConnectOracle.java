@@ -2,19 +2,26 @@ package jdbc;
 
 import java.sql.CallableStatement;
 import java.sql.Connection;
+import java.util.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.List;
+import java.util.Locale;
 
 import model2.Jednostka;
 import model2.Osoba;
 
 public class ConnectOracle {
 
-	public static void main(String[] args) throws SQLException {
+	private static String dateFormat = "yyyy-MM-dd";
+	private static SimpleDateFormat formatter = new SimpleDateFormat(dateFormat, Locale.ENGLISH);
+	
+	public static void main(String[] args) throws SQLException, ParseException {
 		// TODO Auto-generated method stub
 
 		try {
@@ -70,6 +77,12 @@ public class ConnectOracle {
 			}
 			
 		}
+		Date date = formatter.parse("1988-01-31");
+		List<Osoba> osoby = db.getOsobyOlderThan(date);
+		for(Osoba o : osoby){
+			System.out.println(o.getId() +" " +o.getImie()+ " " +o.getNazwisko());
+			}
+			
 		//TEST  DBConnector;
 	}
 
