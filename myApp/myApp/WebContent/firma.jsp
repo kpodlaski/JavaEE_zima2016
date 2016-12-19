@@ -6,7 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <jsp:useBean id="db" class="jdbc.DBConnector" scope="application"/>
-<title>Strona Firmowa ${firma.nazwa}</title>
+<title>Strona Firmowa </title>
 </head>
 <body>
 <h1>${firma.nazwa}</h1>
