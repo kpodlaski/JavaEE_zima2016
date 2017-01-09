@@ -13,6 +13,7 @@ import java.util.List;
  */
 @Entity
 @NamedQuery(name="Jednostka.findAll", query="SELECT j FROM Jednostka j")
+//@NamedQuery(name="OsobaByJednostka.findAll", query="SELECT o FROM Jednostka j, Osoba o Where o in j.pracownicy")
 public class Jednostka implements Serializable {
 	private static final long serialVersionUID = 1L;
 
