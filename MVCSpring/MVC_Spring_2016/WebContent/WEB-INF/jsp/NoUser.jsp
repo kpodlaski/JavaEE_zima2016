@@ -7,8 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-Widok jest Simple 
-<hr/>
-${basicText} ${user.name} ${user.tel}
+Nie ma takiego uzytkownika
 </body>
 </html>
