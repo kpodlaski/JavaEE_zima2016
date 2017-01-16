@@ -1,6 +1,7 @@
 package controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -46,16 +47,18 @@ public class SimpleController {
 		ModelAndView mv =  new ModelAndView("Simple");
 		mv.addObject("user",u);
 		mv.addObject("basicText", "Dodano do bazy");
+		
 		return mv;
 	}
 	
-	@RequestMapping(path="/user/{name}", method=RequestMethod.DELETE)
+	@RequestMapping(path="/user/{name}", method=RequestMethod.DELETE 
+			/*, produces=MediaType.APPLICATION_JSON_UTF8_VALUE */)
 	public ModelAndView userDeleteOperation(@PathVariable String name){
 		User u = telBook.book.get(name);
 		telBook.book.remove(name);
 		ModelAndView mv =  new ModelAndView("Simple");
 		mv.addObject("user",u);
-		mv.addObject("basicText", "Skasowano");
+		//mv.addObject("basicText", "Skasowano");
 		return mv;
 	}
 	
