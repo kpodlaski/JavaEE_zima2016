@@ -5,6 +5,18 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script>
+$(document).ready( function(){
+	
+	$("button").click(function(){
+		window.location.href = "../newTel.html";
+	});
+	
+}
+		
+		);
+</script>
 <title>Insert title here</title>
 </head>
 <body>
